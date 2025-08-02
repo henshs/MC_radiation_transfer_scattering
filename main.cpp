@@ -65,7 +65,7 @@ int main() {
     }
     
     //move packets
-    double rand3, rand4, sigma, kmu;
+    double rand3, sigma, kmu;
     double rho, tau, mfp, r;
     
     sigma = 1.0; // scattering opacity
@@ -78,7 +78,6 @@ int main() {
             rand1 = get_random(0.0, 1.0);
             rand2 = get_random(0.0, 1.0);
             rand3 = get_random(0.0, 1.0);
-            rand4 = get_random(0.0, 1.0);
             
             tau = - log(rand3); // optical depth
             mfp = tau / ((kmu + sigma) * rho); // mean free path
@@ -135,16 +134,22 @@ int main() {
     }
     
     double rad_mid;
+    int histo_debug=0;
+    
     for (int i = 0; i < nbins; i++){
         rad_mid = rad_min + (i + 0.5) * bin_width;
         
         file << rad_mid << "   " << histogram[i] << "\n";
+        
+        histo_debug += histogram[i];
     }
     
     file.close();
     
     cout << "radmax  " << rad_max << endl;
     cout << "radmin  " << rad_min << endl;
+    
+    cout << "histo debug" << histo_debug << endl;
     
     return 0;
 };
