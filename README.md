@@ -156,7 +156,7 @@ Example:
 Compile using GCC:
 
 ```bash
-g++ -O3 -std=c++17 monte_carlo_transport.cpp -o transport
+g++ -O3 -std=c++17 main.cpp -o transport
 ```
 
 Run:
