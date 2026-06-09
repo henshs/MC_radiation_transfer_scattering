@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a simple Monte Carlo simulation of radiative transport in a homogeneous scattering medium. Radiation packets are emitted from the origin and undergo isotropic scattering as they propagate through the medium. The simulation tracks the spatial distribution of packets after a large number of scattering events and generates a histogram of their final radial positions.
+This project implements a simple Monte Carlo simulation of particle transport in a homogeneous scattering medium. Packets are emitted from the origin and undergo isotropic scattering as they propagate through the medium. The simulation tracks the spatial distribution of packets after a large number of scattering events and generates a histogram of their final radial positions.
 
 The code is written in C++ and serves as a basic demonstration of Monte Carlo methods used in radiation transport, astrophysics, neutrino transport, and diffusion problems.
 
